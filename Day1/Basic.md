@@ -97,3 +97,125 @@ Variables declared without initialization are set to their type's zero value.
 - String type: `""` (empty string)
 - Nil for pointers, functions, interfaces, slices, channels, and maps
 
+# For Loops in Go
+
+The Go programming language provides a single `for` loop construct that can be used in various ways to iterate over data structures or to create loops of different kinds. This document outlines the different usages of `for` loops in Go.
+
+## Simple Loop
+
+A loop that continues until a condition is no longer true.
+
+```go
+for condition {
+    // code to execute
+}
+```
+
+Example:
+
+```go
+i := 0
+for i < 10 {
+    fmt.Println(i)
+    i++
+}
+```
+
+## Classic For Loop
+
+The traditional `for` loop with an initializer, condition, and post statement.
+
+```go
+for initializer; condition; post {
+    // code to execute
+}
+```
+
+Example:
+
+```go
+for i := 0; i < 10; i++ {
+    fmt.Println(i)
+}
+```
+
+## For-Range Loop
+
+Iterate over elements of arrays, slices, strings, maps, and channels.
+
+```go
+for key, value := range collection {
+    // code to execute
+}
+```
+
+Example for a slice:
+
+```go
+slice := []int{1, 2, 3, 4, 5}
+for i, value := range slice {
+    fmt.Println(i, value)
+}
+```
+
+Example for a map:
+
+```go
+m := map[string]string{"a": "Apple", "b": "Banana"}
+for key, value := range m {
+    fmt.Println(key, value)
+}
+```
+
+## Infinite Loop
+
+Loops indefinitely until `break` is called or an enclosing function returns.
+
+```go
+for {
+    // code to execute
+}
+```
+
+Example:
+
+```go
+for {
+    fmt.Println("Looping indefinitely")
+    break // will exit the loop
+}
+```
+
+## Loop with Continue
+
+Skip the rest of the current loop iteration and continue with the next.
+
+```go
+for i := 0; i < 10; i++ {
+    if i%2 == 0 {
+        continue
+    }
+    fmt.Println(i) // will print odd numbers
+}
+```
+
+## Loop with Break
+
+Exit the loop before it completes all its iterations.
+
+```go
+for i := 0; i < 10; i++ {
+    if i > 5 {
+        break
+    }
+    fmt.Println(i)
+}
+```
+
+## Conclusion
+
+The `for` loop is a powerful control structure in Go that can handle a variety of iterative tasks with simplicity and clarity. Use the examples above as a starting point for implementing your own `for` loop logic in Go programs.
+
+```
+
+```
