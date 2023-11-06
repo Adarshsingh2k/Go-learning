@@ -216,6 +216,4 @@ for i := 0; i < 10; i++ {
 
 The `for` loop is a powerful control structure in Go that can handle a variety of iterative tasks with simplicity and clarity. Use the examples above as a starting point for implementing your own `for` loop logic in Go programs.
 
-```
 
-```
