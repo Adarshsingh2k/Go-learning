@@ -97,6 +97,3 @@ Variables declared without initialization are set to their type's zero value.
 - String type: `""` (empty string)
 - Nil for pointers, functions, interfaces, slices, channels, and maps
 
-```
-
-```
